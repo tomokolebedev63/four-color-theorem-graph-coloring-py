@@ -47,3 +47,10 @@ PYTHONPATH=src python -m unittest discover -s tests
 - `FourColorer` — the coloring class; call `.color(graph)` on an instance.
 - `ColorResult` — frozen dataclass with `colors` (dict from vertex to int in `{0,1,2,3}`) and `num_colors` (int).
 - `ColoringError` — raised when the graph cannot be colored with at most four colors.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
