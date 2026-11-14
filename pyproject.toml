@@ -1,6 +1,6 @@
 [project]
 name = "four-color-theorem-graph-coloring-py"
-version = "0.1.0"
+version = "0.1.1"
 description = "Four-colors an undirected graph greedily and returns the vertex-to-color mapping with the number of colors used."
 requires-python = ">=3.10"
 dependencies = []
